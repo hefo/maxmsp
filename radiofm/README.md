@@ -1,12 +1,13 @@
 # FM Radio Simulator in Max/MSP
 
-This is a set of abstractions in Max/MSP, called `radiofm`, for simulating FM modulation and demodulation at audio DSP rate in Max/MSP.
+**radiofm** is a set of abstractions for simulating FM modulation and demodulation at audio DSP rate in Max/MSP
 
 The repository contains:
-- `radiofm.mod`: The FM modulator abstraction generates the modulated signals. This abstraction has frequency deviation k_f as first argument and allows signal inputs for audio signal, carrier frequency, and input gain.
-- `radiofm.channel`: The channel abstraction that combines the modulated signals and adds noise and fading effects. This abstraction accepts inputs for amount of fading and noise floor level.
-- `radiofm.demod`: The FM demodulator abstraction recovers the signal at a given carrier frequency and plays it back as an audio signal.
-- `radiofm-example`: An example patch that demonstrates how the modules can be interconnected to simulate a complete FM radio transmission system.
+- radiofm.mod: Modulator abstraction that generates a FM modulated signal from an audio input.
+- radiofm.channel: Channel abstraction that adds noise and fading effects.
+- radiofm.demod: Demodulator abstraction that FM demodulates a signal at a given carrier frequency and plays back the recovered audio signal.
+- radiofm-examples: Help patch that demonstrates how the radiofm abstractions can be interconnected to simulate a complete FM radio transmission system.
 
+This work was presented as a paper at [PdMaxCon25~](https://music.illinois.edu/pd-max-con/)
 
-![](./screenshots/radiofm-example.png)
+![](./screenshots/radiofm-example_2.png)

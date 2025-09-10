@@ -4,22 +4,33 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 529.0, 220.0, 377.0, 461.0 ],
+		"rect" : [ 866.0, 231.0, 377.0, 461.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "live.scope~",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 95.0, 161.0, 90.0, 39.0 ],
+					"range" : [ -0.1, 2.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 252.0, 136.0, 92.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Noise floor (dB)"
 				}
 
@@ -31,7 +42,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 223.0, 41.0, 89.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Fading amount"
 				}
 
@@ -59,7 +69,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -119,8 +129,7 @@
 								}
 
 							}
- ],
-						"originid" : "pat-939"
+ ]
 					}
 ,
 					"patching_rect" : [ 64.0, 200.0, 121.0, 22.0 ],
@@ -156,7 +165,7 @@
 				"box" : 				{
 					"comment" : "Fading amount (0-1)",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -201,7 +210,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -600,8 +609,7 @@
 								}
 
 							}
- ],
-						"originid" : "pat-941"
+ ]
 					}
 ,
 					"patching_rect" : [ 63.0, 103.0, 115.0, 22.0 ],
@@ -685,11 +693,11 @@
 				"box" : 				{
 					"comment" : "Input (mc)",
 					"id" : "obj-64",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 42.0, 36.0, 30.0, 30.0 ]
 				}
 
@@ -698,7 +706,7 @@
 				"box" : 				{
 					"comment" : "Noise floor (dB)",
 					"id" : "obj-65",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -711,7 +719,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-66",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -803,7 +811,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"order" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
+					"order" : 1,
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -843,10 +860,7 @@
 				}
 
 			}
- ],
-		"originid" : "pat-937",
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }
