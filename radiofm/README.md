@@ -10,4 +10,4 @@ The repository contains:
 
 This work was presented as a paper at [PdMaxCon25~](https://music.illinois.edu/pd-max-con/)
 
-![](./screenshots/radiofm-example_2.png)
+![](./screenshots/radiofm-example-2.png)
